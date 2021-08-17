@@ -1,0 +1,52 @@
+body {
+  background-image: url("../images/bg-intro-desktop.png");
+  background-color: #ff7a7a;
+  font-family: "Poppins";
+  color: #fff;
+  font-size: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+form {
+  color: #3e3c49;
+}
+
+.containerOuter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.trialNotice {
+  background-color: #6055a5;
+}
+
+.btn-green {
+  background-color: #38cc8c;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media (max-width: 420px) {
+  body {
+    text-align: center;
+  }
+  h1 {
+    margin-top: 90px;
+    margin-bottom: 30px;
+  }
+  .container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
