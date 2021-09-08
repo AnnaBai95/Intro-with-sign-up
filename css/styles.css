@@ -24,8 +24,27 @@ form {
   min-height: 100vh;
 }
 
+.callTo {
+  margin: 134px 52px;
+}
+
+.callTo h1 {
+  word-spacing: 0.195rem;
+}
+
 .trialNotice {
   background-color: #6055a5;
+  text-align: center;
+  -webkit-box-shadow: 0px 7px #1b1b1b3b;
+          box-shadow: 0px 7px #1b1b1b3b;
+}
+
+.trialNotice p {
+  font-weight: 400;
+}
+
+.trialNotice p span {
+  font-weight: 600;
 }
 
 .btn-green {
@@ -34,19 +53,23 @@ form {
   text-transform: uppercase;
 }
 
-@media (max-width: 420px) {
-  body {
-    text-align: center;
-  }
-  h1 {
-    margin-top: 90px;
-    margin-bottom: 30px;
-  }
+@media (max-width: 526px) {
   .container .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .callTo {
+    margin: 56px 14px;
+  }
+  .callTo p {
+    text-align: center;
+  }
+  .callTo h1 {
+    margin-top: 90px;
+    margin-bottom: 30px;
+    margin-left: 30px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

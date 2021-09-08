@@ -1,7 +1,13 @@
+$bg-red: hsl(0, 100%, 74%);
+$fntGrey:hsl(249, 10%, 26%);
+$blue: hsl(248, 32%, 49%);
+$light-green: hsl(154, 59%, 51%);
+$main-font: "Poppins";
+
 body {
     background-image: url("../images/bg-intro-desktop.png");
-    background-color: hsl(0, 100%, 74%);
-    font-family: "Poppins";
+    background-color: $bg-red;
+    font-family: $main-font;
     color: #fff;
     font-size: 1rem;
 }
@@ -11,7 +17,7 @@ h1 {
 }
 
 form {
-    color: hsl(249, 10%, 26%);
+    color: $fntGrey;
 }
 
 .containerOuter {
@@ -20,26 +26,49 @@ form {
     min-height: 100vh;
 }
 
+.callTo {
+    margin: 134px 52px;
+}
+
+.callTo h1 {
+    word-spacing: 0.195rem;
+}
+
 .trialNotice {
-    background-color: hsl(248, 32%, 49%);
+    background-color: $blue;
+    text-align: center;
+    box-shadow: 0px 7px #1b1b1b3b;
+
+    p {
+        font-weight: 400;
+    }
+    p span {
+        font-weight: 600;
+    }
 }
 
 .btn-green {
-    background-color: hsl(154, 59%, 51%);
+    background-color: $light-green;
     color: white;
     text-transform: uppercase;
 }
 
-@media (max-width: 420px) {
-    body {
-        text-align: center;
-    }
-
-    h1 {
-        margin-top: 90px;
-        margin-bottom: 30px;
-    }
+@media (max-width: 526px) {
     .container .row {
         flex-direction: column;
+    }
+
+    .callTo {
+        margin: 56px 14px;
+
+        p {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 90px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+        }
     }
 }
