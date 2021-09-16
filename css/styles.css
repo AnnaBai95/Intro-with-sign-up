@@ -90,9 +90,10 @@ form .form-control:focus {
 }
 
 .terms {
-  font-size: 0.875rem;
+  font-size: 0.625rem;
   font-weight: 500;
   color: #b3b3b3;
+  padding: 0px 20px;
 }
 
 .terms a {
@@ -115,6 +116,10 @@ footer .attribution a {
 }
 
 @media (max-width: 526px) {
+  .terms {
+    padding: 0px 13px;
+    font-size: 0.75rem;
+  }
   .container .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
