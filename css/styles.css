@@ -44,6 +44,47 @@ form .form-control:focus {
           box-shadow: 0 0 1px #6055a5 !important;
 }
 
+form input.error,
+form .form-control:focus.error {
+  border: 2px solid #d39392 !important;
+  background-image: url(../images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 17px);
+  background-size: 5%;
+}
+
+form label.error {
+  color: #d39392;
+  float: right;
+  font-size: 10px;
+  font-style: italic;
+  margin: 2px 0px 10px 0px;
+}
+
+.emailError::-webkit-input-placeholder {
+  color: #d39392 !important;
+  font-size: 0.8125rem;
+  margin-left: 10px;
+}
+
+.emailError:-ms-input-placeholder {
+  color: #d39392 !important;
+  font-size: 0.8125rem;
+  margin-left: 10px;
+}
+
+.emailError::-ms-input-placeholder {
+  color: #d39392 !important;
+  font-size: 0.8125rem;
+  margin-left: 10px;
+}
+
+.emailError::placeholder {
+  color: #d39392 !important;
+  font-size: 0.8125rem;
+  margin-left: 10px;
+}
+
 .containerOuter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,7 +96,7 @@ form .form-control:focus {
 }
 
 .callTo {
-  margin: 134px 52px;
+  margin: 190px 52px;
 }
 
 .callTo h1 {
@@ -89,6 +130,14 @@ form .form-control:focus {
   padding: 14px;
 }
 
+.btn:hover, .btn:focus, .btn:active {
+  color: #fff !important;
+  cursor: pointer;
+  background-color: #64e0aa;
+  -webkit-box-shadow: 0px 4px #58bb91;
+          box-shadow: 0px 4px #58bb91;
+}
+
 .terms {
   font-size: 0.625rem;
   font-weight: 500;
@@ -111,8 +160,12 @@ footer .attribution {
 }
 
 footer .attribution a {
-  color: #6055a5 !important;
+  color: #0e025a !important;
   text-decoration: none;
+}
+
+footer .attribution a:hover {
+  color: #6055a5 !important;
 }
 
 @media (max-width: 526px) {
@@ -139,6 +192,9 @@ footer .attribution a {
   }
   .attribution {
     padding: 16px;
+  }
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
   }
 }
 

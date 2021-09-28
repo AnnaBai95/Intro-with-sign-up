@@ -2,6 +2,7 @@ $bg-red: hsl(0, 100%, 74%);
 $fntGrey: hsl(249, 10%, 26%);
 $blue: hsl(248, 32%, 49%);
 $light-green: hsl(154, 59%, 51%);
+$dark-red: #d39392;
 $bx-shadow-blk: #1b1b1b3b;
 $bx-shadow-green: #3db984;
 $light-grey: #b3b3b3;
@@ -23,6 +24,7 @@ form {
     color: $fntGrey;
     box-shadow: 0px 7px $bx-shadow-blk;
     border-radius: 11px;
+    caret-color: $blue;
 
     input {
         padding: 16px !important;
@@ -35,7 +37,27 @@ form {
         box-shadow: 0 0 1px $blue !important;
     }
 
-    caret-color: $blue;
+    input.error,
+    .form-control:focus.error {
+        border: 2px solid $dark-red !important;
+        background-image: url(../images/icon-error.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 17px);
+        background-size: 5%;
+    }
+
+    label.error {
+        color: $dark-red;
+        float: right;
+        font-size: 10px;
+        font-style: italic;
+        margin: 2px 0px 10px 0px;
+    }
+}
+.emailError::placeholder {
+    color: $dark-red !important;
+    font-size: 0.8125rem;
+    margin-left: 10px;
 }
 
 .containerOuter {
@@ -45,7 +67,7 @@ form {
 }
 
 .callTo {
-    margin: 134px 52px;
+    margin: 190px 52px;
 }
 
 .callTo h1 {
@@ -74,6 +96,12 @@ form {
     font-weight: 500;
     padding: 14px;
 }
+.btn:hover, .btn:focus, .btn:active {
+    color: #fff !important;
+    cursor: pointer;
+    background-color: #64e0aa;
+    box-shadow: 0px 4px #58bb91;
+}
 
 .terms {
     font-size: 0.625rem;
@@ -92,14 +120,17 @@ footer {
     .attribution {
         padding: 20px;
         a {
-            color: $blue !important;
+            color: #0e025a !important;
             text-decoration: none;
+        }
+        a:hover {
+            color: $blue !important;
         }
     }
 }
 
 @media (max-width: 526px) {
-    .terms{
+    .terms {
         padding: 0px 13px;
         font-size: 0.75rem;
     }
@@ -122,6 +153,9 @@ footer {
     }
     .attribution {
         padding: 16px;
+    }
+    body {
+        background-image: url("../images/bg-intro-mobile.png");
     }
 }
 
